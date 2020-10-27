@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class ConversionProgram        
+{        
+    public static void main(String[] args)
+    {
+        double distanceMeters;
+        int menuEntry;
+
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println();
+        System.out.printf( "Enter a Distance in Meters: ");
+        distanceMeters = input.nextDouble();
+        
+        while (distanceMeters <= 0)
+        {
+            System.out.printf( "\nInvalid Input. Distance Must be a " +
+                                "Positive Number\n\n" +
+                                "Enter a Distance in Meters: ");
+            distanceMeters = input.nextDouble();
+        }
+        
+        menu(); 
+        menuEntry = input.nextInt();
+        
+       while (menuEntry <= 0 && menuEntry >= 5)
+        {
+            System.out.println( "\nInvalid Input.\nEntry must be 1-4\n");
+            menu();
+            menuEntry = input.nextInt();
+        }
+        
+       while (menuEntry !=4)
+       {
+            switch (menuEntry)
+            {   
+               case 1 -> showKilometers(distanceMeters);
+               case 2 -> showInches(distanceMeters);
+               case 3 -> showFeet(distanceMeters);
+            } 
+        menu(); 
+        menuEntry = input.nextInt();
+       }
+       
+       System.exit(0);            
+    }
+
+    public static void menu ()
+    {              
+        System.out.println( "1. Convert to Kilometers");
+        System.out.println( "2. Convert to Inches");
+        System.out.println( "3. Convert to Feet");
+        System.out.println( "4. Quit the Program");
+        System.out.printf( "\nEnter your Choice: ");
+    }
+    
+    public static void showKilometers( double meters ) 
+    {
+        double kilometers;
+        kilometers = meters * .001;
+        System.out.printf( "%.1f meters is %.1f kilometers\n\n", meters, kilometers);
+    }
+    
+    public static void showInches( double distanceMeters)
+    {
+        double inches;
+        inches = distanceMeters * 39.37;
+        System.out.printf( "%.2f coverted to inches is %.2f", distanceMeters, inches );
+    }
+    
+    public static void showFeet(double distanceMeters)
+    {
+    double feet;
+    feet = distanceMeters * 3.281;
+    System.out.printf( "%.3f meters is %.3f feet.", distanceMeters, feet);
+    }   
+}
