@@ -71,8 +71,8 @@ public class ConversionProgram
     
     public static void showFeet(double distanceMeters)
     {
-    double feet;
-    feet = distanceMeters * 3.281;
-    System.out.printf( "%.3f meters is %.3f feet.", distanceMeters, feet);
+         double feet;
+         feet = distanceMeters * 3.281;
+         System.out.printf( "%.3f meters is %.3f feet.", distanceMeters, feet);
     }   
 }
