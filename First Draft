@@ -1,3 +1,6 @@
+// Created by, Tanner Slick, Stephan Schuller, Jaydon Tomas, Nicholas  Wolfe
+
+
 import java.util.Scanner;
 
 public class ConversionProgram        
@@ -59,20 +62,20 @@ public class ConversionProgram
     {
         double kilometers;
         kilometers = meters * .001;
-        System.out.printf( "%.1f meters is %.1f kilometers\n\n", meters, kilometers);
+        System.out.printf( "%.1f meters is %.1f kilometers.\n\n", meters, kilometers);
     }
     
     public static void showInches( double distanceMeters)
     {
         double inches;
         inches = distanceMeters * 39.37;
-        System.out.printf( "%.2f coverted to inches is %.2f", distanceMeters, inches );
+        System.out.printf( "%.2f coverted to inches is %.2f inches.\n\n", distanceMeters, inches );
     }
     
     public static void showFeet(double distanceMeters)
     {
          double feet;
          feet = distanceMeters * 3.281;
-         System.out.printf( "%.3f meters is %.3f feet.", distanceMeters, feet);
+         System.out.printf( "%.3f meters is %.3f feet.\n\n", distanceMeters, feet);
     }   
 }
